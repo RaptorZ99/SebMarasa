@@ -17,11 +17,11 @@ export function SectionHeading({ kicker, title, lead, refNo, tone = 'paper', cla
     <Reveal className={className}>
       <div className="flex items-center gap-3">
         <span aria-hidden className={cn('size-1.5 shrink-0 rotate-45', paper ? 'bg-signal-deep' : 'bg-signal')} />
-        <span className={cn('kicker whitespace-nowrap', paper ? 'text-signal-deep' : 'text-signal')}>
+        <span className={cn('kicker min-w-0', paper ? 'text-signal-deep' : 'text-signal')}>
           {refNo && <span className="opacity-70">{refNo} · </span>}
           {kicker}
         </span>
-        <span aria-hidden className={cn('h-px min-w-8 flex-1', paper ? 'bg-ink/15' : 'bg-paper/10')} />
+        <span aria-hidden className={cn('hidden h-px min-w-8 flex-1 sm:block', paper ? 'bg-ink/15' : 'bg-paper/10')} />
       </div>
       <h2 className={cn('display-title mt-6 text-[clamp(1.9rem,4.6vw,3.4rem)]', paper ? 'text-ink' : 'text-paper')}>
         {title}

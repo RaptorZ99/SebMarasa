@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'motion/react'
-import type { ReactNode } from 'react'
+import { useLayoutEffect, type ReactNode } from 'react'
 
 const GATE = [0.83, 0, 0.17, 1] as const
 
@@ -9,6 +9,11 @@ const GATE = [0.83, 0, 0.17, 1] as const
  */
 export function PageTransition({ children, label }: { children: ReactNode; label: string }) {
   const reduce = useReducedMotion()
+
+  // Chaque page (nouvelle instance par route) repart du haut, quoi qu'il arrive.
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [])
 
   if (reduce) {
     return (
@@ -26,9 +31,9 @@ export function PageTransition({ children, label }: { children: ReactNode; label
   return (
     <>
       <motion.main
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0, transition: { duration: 0.55, delay: 0.5, ease: [0.22, 1, 0.36, 1] } }}
-        exit={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.42, ease: [0.22, 1, 0.36, 1] } }}
+        exit={{ opacity: 0, transition: { duration: 0.28, ease: 'easeIn' } }}
       >
         {children}
       </motion.main>
@@ -37,8 +42,8 @@ export function PageTransition({ children, label }: { children: ReactNode; label
         aria-hidden
         className="fixed inset-0 z-[96] flex items-center justify-center bg-ink-2"
         initial={{ y: '0%' }}
-        animate={{ y: '-100.5%', transition: { duration: 0.7, delay: 0.1, ease: GATE } }}
-        exit={{ y: '0%', transition: { duration: 0.5, ease: GATE } }}
+        animate={{ y: '-100.5%', transition: { duration: 0.62, delay: 0.14, ease: GATE } }}
+        exit={{ y: '0%', transition: { duration: 0.42, ease: GATE } }}
       >
         <div className="flex items-center gap-4">
           <span className="size-2 animate-blink rounded-full bg-signal" />
@@ -52,8 +57,8 @@ export function PageTransition({ children, label }: { children: ReactNode; label
         aria-hidden
         className="fixed inset-0 z-[95] bg-signal"
         initial={{ y: '0%' }}
-        animate={{ y: '-100.5%', transition: { duration: 0.66, delay: 0.24, ease: GATE } }}
-        exit={{ y: '0%', transition: { duration: 0.5, ease: GATE } }}
+        animate={{ y: '-100.5%', transition: { duration: 0.58, delay: 0.26, ease: GATE } }}
+        exit={{ y: '0%', transition: { duration: 0.42, ease: GATE } }}
       />
     </>
   )

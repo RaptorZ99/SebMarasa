@@ -26,7 +26,10 @@ export default function App() {
       <Grain />
       <Header />
       <div id="contenu">
-        <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+        <AnimatePresence
+          mode="wait"
+          onExitComplete={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}
+        >
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/parcours" element={<Parcours />} />

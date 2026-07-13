@@ -211,18 +211,18 @@ export default function Home() {
             <Reveal key={row.no} delay={i * 0.05}>
               <Link
                 to={row.to}
-                className="group grid grid-cols-[auto_1fr_auto] items-center gap-5 border-b border-ink/15 py-6 transition-colors duration-300 hover:bg-ink/[0.04] sm:gap-10 sm:py-8"
+                className="group grid grid-cols-[auto_1fr_auto] items-center gap-4 border-b border-ink/15 py-6 transition-colors duration-300 hover:bg-ink/[0.04] sm:gap-10 sm:py-8"
               >
                 <span className="kicker text-signal-deep">{row.no}</span>
-                <span>
-                  <span className="display-title block text-[clamp(1.7rem,4.2vw,2.8rem)] transition-colors duration-300 group-hover:text-signal-deep">
+                <span className="min-w-0">
+                  <span className="display-title block text-[clamp(1.4rem,5.2vw,2.8rem)] transition-colors duration-300 group-hover:text-signal-deep">
                     {row.title}
                   </span>
                   <span className="mono-data mt-1 block text-ink-soft">{row.desc}</span>
                 </span>
                 <ArrowUpRight
                   aria-hidden
-                  className="size-6 text-ink-soft transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-signal-deep sm:size-8"
+                  className="size-5 shrink-0 text-ink-soft transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-signal-deep sm:size-8"
                 />
               </Link>
             </Reveal>
