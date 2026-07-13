@@ -135,8 +135,8 @@ export const missions: Mission[] = [
     duration: '3 mois',
     year: '2026',
     summary:
-      'Poste SSIAP 1 en établissement recevant du public : rondes de prévention incendie, levées de doute sur alarme, essais et exploitation du SSI, tenue du registre de sécurité, contrôle d’accès.',
-    tags: ['ERP', 'SSIAP 1', 'SSI', 'Registre de sécurité'],
+      'Poste SSIAP 1 en établissement recevant du public : rondes de prévention incendie, levées de doute sur alarme, surveillance du poste de sécurité incendie, contrôle d’accès.',
+    tags: ['ERP', 'SSIAP 1', 'Levées de doute', 'Contrôle d’accès'],
     org: '4ᵉ acteur français de la sécurité humaine · agence de Floirac (33)',
   },
   {
@@ -146,7 +146,7 @@ export const missions: Mission[] = [
     duration: '4 mois',
     year: '2025',
     summary:
-      'Surveillance en grande distribution : prévention de la démarque inconnue, vidéosurveillance ciblée, interpellations dans le strict cadre légal, coordination avec les forces de l’ordre.',
+      'Surveillance en grande distribution : prévention de la démarque inconnue, vidéosurveillance ciblée, interpellations dans le strict cadre légal, relais aux forces de l’ordre.',
     tags: ['Distribution', 'Arrière-caisse', 'Vidéosurveillance'],
   },
   {
@@ -184,13 +184,13 @@ export const missions: Mission[] = [
   },
   {
     company: 'RPS Sécurité',
-    role: 'Agent de sécurité · référent site',
+    role: 'Agent de sécurité',
     period: 'Mai 2023 → Déc. 2024',
     duration: '20 mois',
     year: '2023–24',
     summary:
-      'Mission longue durée sur un même site tertiaire : référent des consignes auprès des nouveaux agents, interlocuteur quotidien du client, continuité de service et remontées qualité. Première expérience de coordination terrain.',
-    tags: ['Mission longue', 'Coordination', 'Relation client'],
+      'La mission la plus longue de mon parcours, sur un même site tertiaire : une présence stable et fiable dans la durée, et une vraie connaissance du site, de ses consignes et de ses habitudes.',
+    tags: ['Mission longue', 'Poste fixe', 'Fiabilité'],
     org: 'Groupe national ISO 9001 & 45001 · titulaire du marché sécurité de Bordeaux Métropole (2024)',
     long: true,
   },
@@ -279,7 +279,7 @@ export const environments: { icon: Icon; name: string; note: string }[] = [
   { icon: Music2, name: 'Salles de concert', note: 'Contrôle d’accès, inspection visuelle, évacuation' },
   { icon: TrainFront, name: 'Gares', note: 'Flux voyageurs, assistance, plan Vigipirate' },
   { icon: Building2, name: 'Sites tertiaires', note: 'PC sécurité, badges, rondes techniques' },
-  { icon: Flame, name: 'ERP / IGH', note: 'Sécurité incendie, SSI, registre' },
+  { icon: Flame, name: 'ERP / IGH', note: 'Sécurité incendie, rondes, levées de doute' },
   { icon: Megaphone, name: 'Événementiel', note: 'Dispositifs temporaires, coordination radio' },
 ]
 
@@ -341,11 +341,11 @@ export const certifications: {
 export const terrainSkills: { icon: Icon; title: string; note: string }[] = [
   { icon: Footprints, title: 'Rondes & surveillance', note: 'Programmées, aléatoires, techniques, avec levées de doute et main courante.' },
   { icon: DoorOpen, title: 'Contrôle d’accès & filtrage', note: 'Piétons et véhicules, gestion des badges, application stricte des consignes.' },
-  { icon: Siren, title: 'Exploitation SSI', note: 'Essais, alarmes, temporisations, coordination avec les secours.' },
-  { icon: Flame, title: 'Sécurité incendie ERP / IGH', note: 'Dégagements, moyens de secours, registre, permis feu.' },
+  { icon: Siren, title: 'Vigilance incendie', note: 'Rondes de prévention, surveillance du poste de sécurité, participation aux évacuations.' },
+  { icon: Eye, title: 'Vidéosurveillance', note: 'Surveillance écran, détection, levée de doute ciblée.' },
   { icon: Users, title: 'Gestion de conflits', note: 'Désescalade verbale, médiation, sang-froid face à l’agressivité.' },
-  { icon: ClipboardList, title: 'Consignes & main courante', note: 'Rédaction précise, traçabilité, transmission aux relèves.' },
-  { icon: Radio, title: 'Coordination PC / radio', note: 'Liaisons permanentes, comptes rendus, procédures d’alerte.' },
+  { icon: ClipboardList, title: 'Consignes & main courante', note: 'Tenue de la main courante, comptes rendus, passation aux relèves.' },
+  { icon: Radio, title: 'Liaison radio & PC', note: 'Comptes rendus, remontées d’incident, procédures d’alerte.' },
   { icon: HeartPulse, title: 'Premiers secours', note: 'SST à jour : protéger, alerter, secourir en attendant les renforts.' },
 ]
 
@@ -354,25 +354,25 @@ export const transverseSkills: { icon: Icon; title: string; lead: string; payoff
     icon: Video,
     title: 'Vidéo & montage',
     lead: 'Je tourne et je monte mes propres vidéos.',
-    payoff: 'Supports commerciaux, formation interne, image de marque.',
+    payoff: 'Un atout concret pour la communication d’une entreprise de sécurité.',
   },
   {
     icon: Share2,
     title: 'Réseaux sociaux',
     lead: 'Je construis et développe des audiences.',
-    payoff: 'Le plan de communication du référentiel, déjà en pratique.',
+    payoff: 'Une vraie base pour le volet communication du métier de dirigeant.',
   },
   {
     icon: Camera,
     title: 'Photographie',
     lead: 'Un œil entraîné au cadrage et au détail.',
-    payoff: 'Audits illustrés, dossiers professionnels, documentation de sites.',
+    payoff: 'Utile pour documenter un site ou monter un dossier soigné.',
   },
   {
     icon: Cpu,
     title: 'Culture tech',
-    lead: 'À l’aise avec tous les outils numériques.',
-    payoff: 'Main courante électronique, planification, veille OSINT.',
+    lead: 'À l’aise avec les outils numériques.',
+    payoff: 'De quoi prendre en main vite les outils du métier (planning, main courante).',
   },
 ]
 
@@ -398,49 +398,49 @@ export const referentiel: { icon: Icon; title: string; formation: string; terrai
     icon: Scale,
     title: 'Réglementation & conformité',
     formation: 'Diriger dans le respect du livre VI du CSI, du code de déontologie et des obligations CNAPS.',
-    terrain: 'Six ans sous carte professionnelle : le cadre légal appliqué chaque jour, sur chaque poste.',
+    terrain: 'Six ans sous carte professionnelle : le cadre légal vécu et appliqué au quotidien, côté agent.',
   },
   {
     icon: Users,
     title: 'Management des équipes',
     formation: 'Manager sur site et à distance, en lien avec police, gendarmerie et secours.',
-    terrain: 'Référent consignes en mission longue : accueil des nouveaux, transmission, exemplarité.',
+    terrain: 'Je n’ai pas encore encadré, mais six ans dans les équipes m’ont appris ce qu’un agent attend de son responsable : un bon point de départ pour apprendre à manager.',
   },
   {
     icon: Radar,
     title: 'Analyse des risques & audit',
     formation: 'Analyser la menace et le contexte, réaliser un audit conseil et un plan de sûreté.',
-    terrain: 'L’instinct des vulnérabilités, forgé par des milliers de rondes en environnements variés.',
+    terrain: 'Un œil de terrain sur les failles d’un site, que la formation m’apprendra à transformer en méthode.',
   },
   {
     icon: Siren,
     title: 'Dispositifs & grands rassemblements',
     formation: 'Concevoir un dispositif complet : postes, cheminements, communication, évacuation.',
-    terrain: 'Stades, concerts, gares : tous les postes d’un dispositif tenus au moins une fois.',
+    terrain: 'Stades, concerts, gares : j’ai tenu les postes d’un dispositif, je sais comment il se vit, avant d’apprendre à le concevoir.',
   },
   {
     icon: Briefcase,
     title: 'Gestion administrative & RH',
     formation: 'Recrutement, DPAE, paie, contrôle des cartes professionnelles, veille réglementaire.',
-    terrain: 'La rigueur documentaire du terrain (registres, mains courantes, rapports) comme socle.',
+    terrain: 'Un domaine nouveau pour moi : j’y apporte rigueur et ponctualité, la formation m’apportera la technique.',
   },
   {
     icon: Megaphone,
     title: 'Marketing & développement',
     formation: 'Plan marketing, e-mailing, positionnement de l’offre et réseaux sociaux.',
-    terrain: 'Vidéaste et créateur de contenu : la communication digitale est déjà une seconde nature.',
+    terrain: 'Vidéaste et créateur de contenu : une vraie longueur d’avance sur le volet communication, à mettre en stratégie.',
   },
   {
     icon: FileSearch,
     title: 'Appels d’offres',
     formation: 'Veille des marchés, analyse du DCE, mémoire technique, dossier de réponse.',
-    terrain: 'La connaissance du réel des prestations, pour des mémoires techniques crédibles.',
+    terrain: 'Je connais la prestation vue du terrain ; la mécanique des marchés, je viens l’apprendre.',
   },
   {
     icon: Lock,
     title: 'Cyber & protection des données',
     formation: 'Risque cyber, OSINT, RGPD : minimisation, consentement, durées de conservation.',
-    terrain: 'Culture tech quotidienne et sensibilité RGPD acquise en vidéosurveillance.',
+    terrain: 'Une culture numérique solide et une sensibilité RGPD née de la vidéosurveillance, à approfondir.',
   },
 ]
 
@@ -448,7 +448,7 @@ export const engagementCentre: { icon: Icon; strong: string; text: string }[] = 
   {
     icon: UserCheck,
     strong: 'Un profil conforme.',
-    text: 'Carte professionnelle en cours de validité, conditions de moralité remplies, prérequis maîtrisés.',
+    text: 'Carte professionnelle en cours de validité, conditions de moralité remplies, prérequis remplis.',
   },
   {
     icon: BookOpen,
@@ -471,12 +471,12 @@ export const engagementEntreprise: { icon: Icon; strong: string; text: string }[
   {
     icon: BadgeCheck,
     strong: 'Opérationnel dès le premier jour.',
-    text: 'Carte pro, SSIAP 1, SST : je renforce votre exploitation immédiatement, sans délai de formation.',
+    text: 'Carte pro, SSIAP 1, SST : je peux tenir un poste dès le premier jour, sans délai de formation.',
   },
   {
     icon: Eye,
-    strong: 'Un regard terrain sur l’exploitation.',
-    text: 'Plannings, contrôles qualité, suivi des agents : je parle la langue des équipes.',
+    strong: 'Un vrai regard de terrain.',
+    text: 'Ce que vivent vos agents, je l’ai vécu : je parle leur langue et je comprends la réalité d’un poste.',
   },
   {
     icon: Share2,

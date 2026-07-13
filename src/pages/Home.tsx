@@ -162,8 +162,8 @@ export default function Home() {
             </p>
             <p>
               Cette polyvalence a un fil rouge : la rigueur. Une carte professionnelle valide jusqu’en 2030, des
-              certifications SSIAP 1, SST et H0B0 à jour, des mains courantes tenues au cordeau, des consignes
-              appliquées puis transmises aux nouveaux agents.
+              certifications SSIAP 1, SST et H0B0 à jour, des mains courantes tenues avec soin, des consignes
+              appliquées à la lettre.
             </p>
             <p>
               Il me reste une marche à franchir, et c’est la bonne : apprendre à concevoir les dispositifs que

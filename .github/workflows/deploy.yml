@@ -36,8 +36,8 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Passer à '/' le jour du domaine custom (+ fichier CNAME)
-          VITE_BASE: /SebMarasa/
+          # Domaine custom marasa.pro : le site est servi à la racine
+          VITE_BASE: /
 
       - name: Fallback SPA (routes profondes)
         run: cp dist/index.html dist/404.html

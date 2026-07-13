@@ -146,7 +146,7 @@ export default function Parcours() {
       <PaperSection className="mt-16 sm:mt-24">
         <SectionHeading
           refNo="Réf. 02.A"
-          kicker="Registre des missions"
+          kicker="Journal des missions"
           title="La chronologie, mission par mission."
           lead="Les contrats courts sont l’usage du secteur ; les missions longues, elles, se méritent. Les deux disent la même chose : une adaptation immédiate et une fiabilité qui donne envie de prolonger."
         />
@@ -156,7 +156,7 @@ export default function Parcours() {
       <PaperSection className="mt-16 sm:mt-24">
         <SectionHeading
           refNo="Réf. 02.B"
-          kicker="Environnements maîtrisés"
+          kicker="Environnements couverts"
           title="Huit terrains, une même exigence."
         />
         <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

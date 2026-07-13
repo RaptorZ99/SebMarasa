@@ -131,8 +131,8 @@ export default function Projet() {
               <Reveal delay={0.12}>
                 <p>
                   C’est ce niveau de responsabilité que je veux atteindre. Pas pour quitter le terrain, mais pour
-                  le servir mieux. Un dirigeant qui a tenu tous les postes sait ce qu’il demande, sait le former,
-                  et sait le défendre face au donneur d’ordre.
+                  le servir mieux. Un dirigeant qui a tenu les postes de terrain sait ce qu’il demande à ses
+                  équipes, et sait les défendre face au donneur d’ordre.
                 </p>
               </Reveal>
             </div>
@@ -145,8 +145,8 @@ export default function Projet() {
         <SectionHeading
           refNo="Réf. 04.C"
           kicker="Référentiel × terrain"
-          title="Ce que la formation exige, ce que j’apporte déjà."
-          lead="Huit blocs du référentiel RNCP 41352, mis en regard de six ans de pratique. La formation ne partira pas d’une page blanche."
+          title="Ce que la formation m’apportera, le terrain sur lequel je m’appuie."
+          lead="Huit blocs de compétences de dirigeant. Certains prolongent mon terrain, d’autres sont tout neufs pour moi : voilà, honnêtement, où j’en suis."
         />
         <div className="mt-12 grid gap-3 sm:grid-cols-2">
           {referentiel.map((domain, i) => (
@@ -162,7 +162,7 @@ export default function Projet() {
                     <p className="mt-1.5 text-[14px]/relaxed text-ink/75">{domain.formation}</p>
                   </div>
                   <div>
-                    <p className="kicker kicker-xs text-signal-deep">Mon terrain</p>
+                    <p className="kicker kicker-xs text-signal-deep">Mon point de départ</p>
                     <p className="mt-1.5 text-[14px]/relaxed font-medium text-ink/90">{domain.terrain}</p>
                   </div>
                 </div>

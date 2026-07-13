@@ -121,8 +121,8 @@ export default function Competences() {
             <SectionHeading
               refNo="Réf. 03.B"
               kicker="Savoir-faire terrain"
-              title="Huit gestes maîtrisés."
-              lead="Le socle opérationnel, éprouvé sur 13 missions : celui qu’un futur dirigeant doit connaître par cœur pour l’exiger de ses équipes."
+              title="Le socle d’un bon agent."
+              lead="Le quotidien concret d’un agent de terrain, éprouvé sur 13 missions. C’est le métier que je connais vraiment, et celui sur lequel je veux construire la suite."
             />
             <div className="mt-10 grid gap-3 sm:grid-cols-2">
               {terrainSkills.map((skill, i) => (
@@ -170,8 +170,8 @@ export default function Competences() {
         <SectionHeading
           refNo="Réf. 03.C"
           kicker="Au-delà du terrain"
-          title="Ce qui sépare un futur dirigeant d’un agent de plus."
-          lead="Le référentiel RNCP 41352 attend d’un dirigeant qu’il communique, vende et se positionne en ligne. Ces compétences-là, je les pratique déjà, en autodidacte assumé."
+          title="Des atouts rares pour un futur dirigeant."
+          lead="Le référentiel RNCP 41352 attend d’un dirigeant qu’il communique et se positionne en ligne. Sur ce terrain-là, j’ai, pour une fois, une vraie avance, en autodidacte."
         />
         <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {transverseSkills.map((skill, i) => (
@@ -212,7 +212,7 @@ export default function Competences() {
             </Reveal>
           ))}
         </div>
-        <p className="mono-data mt-8 text-ink-soft">Également au registre : lecture, photographie, création vidéo.</p>
+        <p className="mono-data mt-8 text-ink-soft">Aussi au programme : lecture, photographie, création vidéo.</p>
       </PaperSection>
 
       <CTABand
