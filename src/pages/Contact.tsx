@@ -75,7 +75,8 @@ export default function Contact() {
           _captcha: 'false',
         }),
       })
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}) as Record<string, unknown>)
+      if (res.ok && String(data.success) === 'true') {
         setStatus('success')
         setName('')
         setEmail('')
