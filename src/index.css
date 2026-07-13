@@ -1,0 +1,240 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Nuit de service — coque sombre du PC sécurité */
+  --color-ink: #0b0d10;
+  --color-ink-2: #10141b;
+  --color-ink-3: #171c25;
+  /* Papier dossier — feuillets du dossier professionnel */
+  --color-paper: #eae7de;
+  --color-paper-2: #dfdbcd;
+  /* Textes secondaires */
+  --color-steel: #98a0ac;
+  --color-ink-soft: #50555e;
+  /* Orange signal — la couleur du brassard SÉCURITÉ */
+  --color-signal: #ee7a1e;
+  --color-signal-deep: #9c4a05;
+  /* Statuts valides */
+  --color-valid: #4fc186;
+  --color-valid-deep: #1d7a4c;
+
+  --font-sans: 'Archivo Variable', 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  --ease-swift: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-gate: cubic-bezier(0.83, 0, 0.17, 1);
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-scan: scan 5.6s ease-in-out infinite;
+  --animate-blink: blink 1.4s steps(2, jump-none) infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes scan {
+    0% {
+      top: -16%;
+      opacity: 0;
+    }
+    7% {
+      opacity: 1;
+    }
+    52% {
+      top: 112%;
+      opacity: 1;
+    }
+    58%,
+    100% {
+      top: 112%;
+      opacity: 0;
+    }
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0.2;
+    }
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    scrollbar-color: #2a2f38 var(--color-ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--color-signal);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2f38;
+    border: 3px solid var(--color-ink);
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-ink);
+  }
+}
+
+/* ————— Typographie ————— */
+
+@utility font-expanded {
+  font-stretch: 125%;
+}
+
+@utility font-semiexp {
+  font-stretch: 112%;
+}
+
+/* Titres display : signalétique institutionnelle */
+@utility display-title {
+  font-stretch: 125%;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  line-height: 0.94;
+}
+
+/* Étiquette mono : registres, références, matricules */
+@utility kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@utility kicker-xs {
+  font-size: 9px;
+}
+
+@utility mono-data {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+/* ————— Matières & décors ————— */
+
+@utility container-x {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1280px;
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
+}
+
+@utility grid-dots-dark {
+  background-image: radial-gradient(rgb(234 231 222 / 0.06) 1px, transparent 1.4px);
+  background-size: 28px 28px;
+}
+
+@utility hatch {
+  background-image: repeating-linear-gradient(-45deg, currentColor 0 1px, transparent 1px 8px);
+}
+
+@utility outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(234 231 222 / 0.13);
+}
+
+@layer components {
+  /* Tampon administratif — la signature du dossier */
+  .stamp {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55em;
+    padding: 0.5em 0.85em 0.45em;
+    border: 2px solid currentColor;
+    border-radius: 3px;
+    font-stretch: 118%;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    line-height: 1;
+    opacity: 0.92;
+  }
+  .stamp::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border: 1px solid currentColor;
+    border-radius: 1px;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  /* Photos traitées façon pièce de dossier : archivage chaud, couleur à l'inspection */
+  .exhibit-img {
+    filter: grayscale(0.92) sepia(0.16) contrast(1.05) brightness(0.98);
+    transform: scale(1.001);
+    transition:
+      filter 0.9s var(--ease-swift),
+      transform 1.4s var(--ease-swift);
+  }
+  .group:hover .exhibit-img,
+  .group:focus-visible .exhibit-img {
+    filter: grayscale(0.12) sepia(0.02) contrast(1.02) brightness(1);
+    transform: scale(1.03);
+  }
+
+  /* Faisceau de contrôle sur les portraits */
+  .scan-beam {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -16%;
+    height: 17%;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, rgb(238 122 30 / 0.16) 72%, rgb(238 122 30 / 0.42));
+    box-shadow: 0 1px 0 rgb(238 122 30 / 0.75);
+    animation: var(--animate-scan);
+  }
+
+  .marquee-track {
+    animation: var(--animate-marquee);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+    .scan-beam {
+      animation: none;
+      opacity: 0;
+    }
+    .exhibit-img,
+    .group:hover .exhibit-img {
+      transform: none;
+    }
+  }
+}
