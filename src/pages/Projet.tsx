@@ -110,38 +110,41 @@ export default function Projet() {
       {/* ——— Feuillet : pourquoi ——— */}
       <PaperSection className="mt-16 sm:mt-24">
         <SectionHeading refNo="Réf. 04.B" kicker="Motivation" title="Pourquoi la direction." />
-        <div className="mt-12 grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
-          <div className="space-y-10">
+        <div className="mt-12 grid items-center gap-10 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] lg:gap-16">
+          <Reveal className="mx-auto w-full max-w-[320px] lg:mx-0">
+            <Exhibit
+              src={img.portraitUniforme}
+              alt="Sébastien en tenue noire de service, dans un ascenseur de site"
+              label="Pièce 08.B · En service"
+              note="Tenue de poste"
+              tone="paper"
+              ratio="aspect-[4/5]"
+            />
+          </Reveal>
+          <div>
             <Reveal>
               <blockquote className="border-l-[3px] border-signal-deep pl-6 sm:pl-8">
-                <p className="display-title text-[clamp(1.6rem,3.6vw,2.6rem)] normal-case leading-tight">
+                <p className="display-title text-[clamp(1.5rem,3vw,2.4rem)] normal-case leading-tight">
                   « La qualité d’une prestation se décide avant la première ronde. »
                 </p>
               </blockquote>
             </Reveal>
-            <Reveal delay={0.1}>
-              <Exhibit
-                src={img.portraitUniforme}
-                alt="Sébastien en tenue noire de service, dans un ascenseur de site"
-                label="Pièce 08.B · En service"
-                note="Tenue de poste"
-                tone="paper"
-                ratio="aspect-[4/5]"
-                className="max-w-[300px]"
-              />
-            </Reveal>
-          </div>
-          <div className="space-y-5 text-[15px]/relaxed text-ink/85 sm:text-base/relaxed">
-            <p>
-              En six ans, j’ai vécu des dispositifs remarquables et d’autres improvisés. La différence ne se
-              jouait jamais sur le terrain : elle se jouait avant, dans l’analyse de risques, le dimensionnement
-              des équipes, la clarté des consignes, le respect du cadre légal.
-            </p>
-            <p>
-              C’est ce niveau de responsabilité que je veux atteindre. Pas pour quitter le terrain : pour le
-              servir mieux. Un dirigeant qui a tenu tous les postes sait ce qu’il demande, sait le former · et
-              sait le défendre face au donneur d’ordre.
-            </p>
+            <div className="mt-8 space-y-5 text-[15px]/relaxed text-ink/85 sm:text-base/relaxed">
+              <Reveal delay={0.08}>
+                <p>
+                  En six ans, j’ai vécu des dispositifs remarquables et d’autres improvisés. La différence ne se
+                  jouait jamais sur le terrain : elle se jouait avant, dans l’analyse de risques, le
+                  dimensionnement des équipes, la clarté des consignes, le respect du cadre légal.
+                </p>
+              </Reveal>
+              <Reveal delay={0.12}>
+                <p>
+                  C’est ce niveau de responsabilité que je veux atteindre. Pas pour quitter le terrain, mais pour
+                  le servir mieux. Un dirigeant qui a tenu tous les postes sait ce qu’il demande, sait le former,
+                  et sait le défendre face au donneur d’ordre.
+                </p>
+              </Reveal>
+            </div>
           </div>
         </div>
       </PaperSection>

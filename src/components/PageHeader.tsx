@@ -30,19 +30,19 @@ export function PageHeader({ refNo, kicker, title, lead, meta, aside }: PageHead
             <span aria-hidden className="h-px min-w-8 flex-1 bg-paper/10" />
           </div>
         </Reveal>
-        <Reveal delay={0.08}>
-          <h1 className="display-title mt-7 text-[clamp(2.4rem,7.2vw,5.6rem)] text-paper">{title}</h1>
-        </Reveal>
         <div
           className={cn(
-            'mt-6',
-            aside ? 'grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,360px)] lg:gap-20' : null,
+            'mt-7',
+            aside ? 'lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,320px)] lg:items-center lg:gap-16' : null,
           )}
         >
           <div>
+            <Reveal delay={0.08}>
+              <h1 className="display-title text-[clamp(2.4rem,7vw,5.4rem)] text-paper">{title}</h1>
+            </Reveal>
             {lead && (
               <Reveal delay={0.16}>
-                <p className="max-w-[58ch] text-base/relaxed text-steel sm:text-lg/relaxed">{lead}</p>
+                <p className="mt-6 max-w-[54ch] text-base/relaxed text-steel sm:text-lg/relaxed">{lead}</p>
               </Reveal>
             )}
             {meta && (
@@ -52,7 +52,7 @@ export function PageHeader({ refNo, kicker, title, lead, meta, aside }: PageHead
             )}
           </div>
           {aside && (
-            <Reveal delay={0.2} className="w-full max-w-[360px]">
+            <Reveal delay={0.2} className="mt-10 w-full max-w-[340px] lg:mt-0 lg:max-w-[320px] lg:justify-self-end">
               {aside}
             </Reveal>
           )}
