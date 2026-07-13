@@ -71,15 +71,6 @@ export default function Projet() {
           </>
         }
         lead="Une certification de niveau 5, préparée en alternance avec ASP Training, qui délivre le titre exigé pour l’agrément dirigeant CNAPS. Six ans de terrain m’ont conduit à cette porte : il ne manque que l’entreprise qui m’aidera à l’ouvrir."
-        aside={
-          <Exhibit
-            src={img.capDirection}
-            alt="Sébastien de dos, sac à la main, face à une porte"
-            label="Pièce 08 · Le cap"
-            note="Prochaine étape : la direction"
-            ratio="aspect-[3/4]"
-          />
-        }
       />
 
       {/* ——— Feuillet : fiche formation ——— */}
@@ -231,17 +222,29 @@ export default function Projet() {
           title="Où je serai dans cinq ans."
           lead="Un plan de carrière assumé, parce qu’un dirigeant se juge d’abord à sa capacité de se projeter."
         />
-        <div className="mt-14 grid gap-10 lg:grid-cols-3 lg:gap-6">
-          {trajectoire.map((step, i) => (
-            <Reveal key={step.title} delay={i * 0.1}>
-              <div className="relative border-t-2 border-ink pt-6">
-                <span aria-hidden className="absolute -top-[5px] left-0 size-2 rotate-45 bg-signal-deep" />
-                <p className="kicker text-signal-deep">{step.period}</p>
-                <h3 className="display-title mt-3 text-2xl">{step.title}</h3>
-                <p className="mt-3 text-[14.5px]/relaxed text-ink-soft">{step.text}</p>
-              </div>
-            </Reveal>
-          ))}
+        <div className="mt-12 grid items-center gap-10 lg:grid-cols-[minmax(0,300px)_minmax(0,1fr)] lg:gap-16">
+          <Reveal className="mx-auto w-full max-w-[300px] lg:mx-0">
+            <Exhibit
+              src={img.capDirection}
+              alt="Sébastien de dos, sac à la main, face à une porte"
+              label="Pièce 08 · Le cap"
+              note="Prochaine étape : la direction"
+              tone="paper"
+              ratio="aspect-[3/4]"
+            />
+          </Reveal>
+          <div className="space-y-8">
+            {trajectoire.map((step, i) => (
+              <Reveal key={step.title} delay={i * 0.08}>
+                <div className="relative border-t-2 border-ink pt-5">
+                  <span aria-hidden className="absolute -top-[5px] left-0 size-2 rotate-45 bg-signal-deep" />
+                  <p className="kicker text-signal-deep">{step.period}</p>
+                  <h3 className="display-title mt-2 text-2xl">{step.title}</h3>
+                  <p className="mt-2 text-[14.5px]/relaxed text-ink-soft">{step.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </PaperSection>
 
