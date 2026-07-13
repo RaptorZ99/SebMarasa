@@ -104,7 +104,6 @@ export default function Home() {
                 alt="Sébastien Marasa en polo Sécurité Incendie, assis près de sa moto"
                 label="Pièce 01 · Le terrain"
                 note="Tenue sécurité incendie"
-                scan
                 priority
               />
             </Reveal>
